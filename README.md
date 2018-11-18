@@ -5,9 +5,7 @@ my fedora setup
 
 run 
 
-'''
- wget https://github.com/lachhebo/fedora-setup/master/fedora-setup.sh && sudo chmod +x fedora-setup.sh && ./fedora-setup.sh﻿
-'''
+	wget https://raw.githubusercontent.com/lachhebo/fedora-setup/master/fedora-setup.sh && sudo chmod +x fedora-setup.sh && ./fedora-setup.sh
 
 # warning
 check the version of Rstudio
