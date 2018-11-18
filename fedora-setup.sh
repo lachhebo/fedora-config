@@ -17,7 +17,7 @@ sudo dnf install $(cat ~/fedora.packages) -y
 pip3 --user install $(cat ~/python.packages)
 pip --user install $(cat ~/python2.packages)
 
-# grab all fltpak to install
+# grab all flatpak to install
 flatpak install flathub $(cat ~/flathub.packages) -y
 
 # download anaconda
