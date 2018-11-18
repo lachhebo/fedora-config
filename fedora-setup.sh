@@ -13,14 +13,17 @@ sudo dnf install https://download1.rstudio.org/rstudio-1.1.463-x86_64.rpm -y
 # grab all packages to install
 sudo dnf install $(cat ~/fedora.packages) -y
 
-# install pyth
+# install python packages
 pip3 --user install $(cat ~/python.packages)
 pip --user install $(cat ~/python2.packages)
 
 # grab all fltpak to install
 flatpak install flathub $(cat ~/flathub.packages) -y
 
-# download anaconda (may be it is useful)
+# download anaconda
 wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
+bash Anaconda3-5.3.0-Linux-x86_64.sh
 
-# web development 
+# web development (Mariadb)
+
+sudo /usr/bin/mysql_secure_installation
