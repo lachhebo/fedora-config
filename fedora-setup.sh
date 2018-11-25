@@ -27,3 +27,5 @@ bash Anaconda3-5.3.0-Linux-x86_64.sh
 # web development (Mariadb)
 
 sudo /usr/bin/mysql_secure_installation
+
+# R packages 

@@ -9,3 +9,4 @@ run
 
 # warning
 check the version of Rstudio
+check the version of Anaconda

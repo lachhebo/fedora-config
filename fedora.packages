@@ -43,3 +43,4 @@ php-gd
 php-mbstring
 php-mcrypt php-xml
 phpmyadmin
+libxml2-devel
