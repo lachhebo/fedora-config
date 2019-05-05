@@ -2,8 +2,6 @@ R
 nano
 nodejs
 tilix
-openssl-devel
-libcurl-devel
 flatpak-builder
 youtube-dl
 python3-tkinter
@@ -12,22 +10,11 @@ chrome-gnome-shell
 gnome-tweak-tool
 valgrind
 syncthing
-gstreamer1-plugins-base
-gstreamer1-plugins-good
-gstreamer1-plugins-ugly
-gstreamer1-plugins-bad-free
-gstreamer1-plugins-bad-free
-gstreamer1-plugins-bad-freeworld
-gstreamer1-plugins-bad-free-extras
-ffmpeg
-zsh
-python2-pip
 pl
 opam
 httpd
 mariadb
 mariadb-server
-httpd
 php
 php-common
 php-pecl-apcu
@@ -41,6 +28,6 @@ php-pecl-memcache
 php-pecl-memcached
 php-gd
 php-mbstring
-php-mcrypt php-xml
+php-mcrypt
+php-xml
 phpmyadmin
-libxml2-devel
