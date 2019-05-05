@@ -6,7 +6,6 @@ libcurl-devel
 flatpak-builder
 youtube-dl
 python3-tkinter
-chrome-gnome-shell
 valgrind
 syncthing
 gstreamer1-plugins-base
