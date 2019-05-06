@@ -3,6 +3,8 @@ matplotlib
 numpy
 pandas
 scikit-learn
+autofeat
+pyclustering
 scipy
 seaborn
 Keras

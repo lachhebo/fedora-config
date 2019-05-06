@@ -6,9 +6,11 @@ io.atom.Atom
 org.gnome.Builder
 org.gnome.Fract
 org.gnome.Glade
-org.gnome.Lollypop/x86_64
-org.gnome.Music
 org.gnome.PasswordSafe
 org.gnome.Todo
 org.gnome.gitg
-org.pitivi.Pitivi 
+org.pitivi.Pitivi
+io.github.GnomeMpv
+ca.desrt.dconf-editor
+org.gnome.Geary
+org.gnome.Notes
