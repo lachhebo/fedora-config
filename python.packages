@@ -5,6 +5,8 @@ pandas
 scikit-learn
 autofeat
 pyclustering
+pyod
 scipy
 seaborn
 Keras
+guake
