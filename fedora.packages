@@ -5,7 +5,6 @@ nodejs
 tilix
 flatpak-builder
 youtube-dl
-python3-tkinter
 epiphany
 chrome-gnome-shell
 gnome-tweak-tool
@@ -32,3 +31,4 @@ php-mbstring
 php-mcrypt
 php-xml
 phpmyadmin
+texlive-latex*

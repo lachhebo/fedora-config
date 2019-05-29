@@ -6,18 +6,18 @@ cd $dir
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # install winepak repository
 flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo
+
 # Install Rpmfusion repo
 #sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-# Update cache for package installs
-dnf makecache
-dnf upgrade
+
 # Install Rstudio
 #sudo dnf install https://download1.rstudio.org/rstudio-1.1.463-x86_64.rpm -y
+
 # grab all packages to install
-dnf install $(cat fedora.packages) -y
+#dnf install $(cat fedora.packages) -y
 
 # install python packages
-pip3 --user install $(cat python.packages)
+pip3 install --user $(cat python.packages)
 #pip --user install $(cat ~/python2.packages)
 
 # grab all flatpak to install

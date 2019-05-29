@@ -1,9 +1,21 @@
 # fedora-setup
+
 my fedora setup
 
-# utilisation
+## utilisation
+
+'''shell
+	sudo dnf install $(cat fedora.packages)  
+	bash fedora-setup.sh
+'''
 
 
-# warning
-check the version of Rstudio
-check the version of Anaconda
+## Todo 
+
+- [ ] automatically install R packages
+- [ ] import .bashrc
+- [ ] parameter syncthing 
+
+
+
+
