@@ -4,10 +4,12 @@ my fedora setup
 
 ## utilisation
 
-'''shell
-	sudo dnf install $(cat fedora.packages)  
-	bash fedora-setup.sh
-'''
+
+```sh
+sudo dnf install $(cat fedora.packages)  
+bash fedora-setup.sh
+
+```
 
 
 ## Todo 
