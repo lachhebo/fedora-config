@@ -1,0 +1,17 @@
+##################### ADD BY ISMAËL LACHHEB ###################
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Aliases
+
+alias cls='clear'
+alias lr='ls -lRh' # recursive ls
+alias hgrep='history | grep '
+alias pgrep='ps aux | grep '
+alias fgrep='find . | grep '
+alias gits='git status'

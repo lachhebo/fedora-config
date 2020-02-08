@@ -7,28 +7,35 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # install winepak repository
 flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo
 
-# Install Rpmfusion repo
-#sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+# install RPMFusion repo
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
-# Install Rstudio
-#sudo dnf install https://download1.rstudio.org/rstudio-1.1.463-x86_64.rpm -y
+# update fedora
+sudo dnf upgrade
 
 # grab all packages to install
-#dnf install $(cat fedora.packages) -y
+sudo dnf install $(cat fedora.packages) -y 
+
+# uses zsh instead of bash 
+chsh -s $(which zsh)
 
 # install python packages
 pip3 install --user $(cat python.packages)
-#pip --user install $(cat ~/python2.packages)
 
 # grab all flatpak to install
 flatpak install flathub $(cat flathub.packages) -y
 
-# download anaconda
-#wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
-#bash Anaconda3-5.3.0-Linux-x86_64.sh
+# install visual studio code
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+sudo dnf check-update
+sudo dnf install code
 
 # web development (Mariadb)
+sudo /usr/bin/mysql_secure_installation
 
-#sudo /usr/bin/mysql_secure_installation
+# setup my aliases
+cat ~/zshrc.aliases >> ~/.zshrc
 
-# R packages
+# generate ssh key
+ssh-keygen
