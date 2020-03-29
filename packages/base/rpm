@@ -4,6 +4,8 @@ vim-enhanced
 python3-devel
 nodejs
 tilix
+lm_sensors
+tilix-nautilus 
 flatpak-builder
 youtube-dl
 valgrind
