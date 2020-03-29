@@ -1,12 +1,5 @@
-com.github.fabiocolacio.marker
-com.visualstudio.code
-de.haeckerfelix.Fragments
-com.github.maoschanz.drawing
-io.atom.Atom
 org.gnome.Builder
 org.gnome.Glade
-org.gnome.PasswordSafe
-org.gnome.Todo
-org.gnome.gitg
-org.gnome.Notes
-org.gnome.SoundRecorder
+com.valvesoftware.Steam
+com.discordapp.Discord
+com.slack.Slack

@@ -1,13 +1,14 @@
 graphviz
 matplotlib
 numpy
+scipy
 pandas
+jupyter
 scikit-learn
 autofeat
 pyclustering
 pyclustertend
 pyod
-scipy
 seaborn
 Keras
-guake
+beautifulsoup4
