@@ -1,6 +1,11 @@
 dolphin
 ark
-ssdm-*
+sddm*
 plasma-desktop
 konsole
 ksysguard
+strawberry
+kde-connect
+gwenview
+okular
+kdevelop
