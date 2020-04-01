@@ -34,56 +34,52 @@ main(){
 	# install RPMFusion repo
 	sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y -q
 	# update fedora
-	sudo dnf upgrade -y -q
-
-
-	# DESKTOP
-
-	if [ $1 = $GNOME_DESKTOP ]
-	then
-		sudo dnf remove $(cat packages/plasma/rpm) -y -q 
-		sudo dnf remove kde* dnfdragora
-		rm -r ~/.config/gtk* ## remove modifications applied by plasma
-		rm ~/.config/.gtk*
-
-		sudo dnf install $(cat packages/gnome/rpm) -y -q
-		sudo systemctl enable gdm
-		flatpak install flathub $(cat packages/gnome/flathub) -y --noninteractive
-		
-	elif [ $1 = $PLASMA_DESKTOP ]
-	then
-		sudo dnf remove $(cat packages/gnome/rpm) -y  -q
-		sudo dnf remove gnome-* gdm tracker-miners gtk3 -y -q
-
-		sudo dnf install $(cat packages/plasma/rpm) -y -q
-		sudo systemctl enable sddm.service
-		flatpak install flathub $(cat packages/plasma/flathub) -y --noninteractive
-	fi
+	sudo dnf upgrade -y
 
 
 	# install basic packages 
-	sudo dnf install $(cat packages/base/rpm) -y -q
+	sudo dnf install $(cat packages/base/rpm) -y
 	# install python packages
-	pip install --user -q $(cat packages/base/python)
+	pip install --user $(cat packages/base/python)
 	# grab all flatpak to install
-	flatpak install flathub $(cat packages/base/flathub) -y --noninteractive
+	flatpak install --system flathub $(cat packages/base/flathub) -y --noninteractive
 }
-
-
-
-# Parse arguments
-while [ $# -gt 0 ]; do
-	case $1 in
-		--nvidia) sudo dnf install akmod-nvidia -y -q;;
-		--zsh) install_zsh_func;;
-		--vscode) install_visual_studio_code;;
-	esac
-	shift
-done
 
 
 main
 
+# DESKTOP
+
+if [ $1 = $GNOME_DESKTOP ]
+then
+	sudo dnf remove $(cat packages/plasma/rpm) -y 
+	sudo dnf remove kde* dnfdragora -y
+	rm -r ~/.config/gtk* ## remove modifications applied by plasma
+	rm ~/.config/.gtk*
+	sudo dnf install $(cat packages/gnome/rpm) -y 
+	sudo systemctl enable gdm
+	sudo systemctl start gdm
+	flatpak install --system flathub $(cat packages/gnome/flathub) -y --noninteractive
 	
+elif [ $1 = $PLASMA_DESKTOP ]
+then
+	sudo dnf remove $(cat packages/gnome/rpm) -y  
+	sudo dnf remove gnome-* gdm tracker-miners gtk3 -y 
+	sudo dnf install $(cat packages/plasma/rpm) -y 
+	sudo systemctl enable sddm.service
+	sudo systemctl start sddm.service
+	flatpak install --system flathub $(cat packages/plasma/flathub) -y --noninteractive
+fi
 
 
+
+# Parse arguments
+
+	while [ $# -gt 0 ]; do
+		case $1 in
+			--nvidia) sudo dnf install akmod-nvidia -y -q;;
+			--zsh) install_zsh_func;;
+			--vscode) install_visual_studio_code;;
+		esac
+		shift
+	done
