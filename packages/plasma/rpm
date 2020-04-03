@@ -9,3 +9,10 @@ kde-connect
 gwenview
 okular
 kdevelop
+plasma-applet-redshift-control
+plasma-applet-weather-widget
+plasma-vault
+plasma-widget-menubar
+breeze-gtk
+kde-gtk-config   
+xorg-x11-drv-synaptics-legacy

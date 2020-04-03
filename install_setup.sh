@@ -68,6 +68,8 @@ then
 	sudo dnf install $(cat packages/plasma/rpm) -y 
 	sudo systemctl enable sddm.service
 	sudo systemctl start sddm.service
+	sudo systemctl start NetworkManager-dispatcher.service  
+	sudo systemctl enable NetworkManager-dispatcher.service
 	flatpak install --system flathub $(cat packages/plasma/flathub) -y --noninteractive
 fi
 
