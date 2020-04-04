@@ -16,3 +16,5 @@ plasma-widget-menubar
 breeze-gtk
 kde-gtk-config   
 xorg-x11-drv-synaptics-legacy
+bluedevil
+kscreen
