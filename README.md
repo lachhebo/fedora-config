@@ -8,7 +8,7 @@ this script allow to setup a fedora workstation with the desktop environment of 
 ```sh  
 	cd fedora-setup
 	chmod +x install_setup.sh
-	sudo ./install_setup.sh [DESKTOP_ENV] [OPTIONS]
+	./install_setup.sh [DESKTOP_ENV] [OPTIONS]
 ```
 
 Instaled packages are parametrable with configurations file : 
@@ -24,13 +24,13 @@ You can choose the desktop envionment of your choice with the DESKTOP_ENV parame
 - PLASMA
 
 ```sh  
-	sudo ./install_setup.sh GNOME
+	./install_setup.sh GNOME
 ```
 
 You can change the desktop environment by running the script with an other DESKTOP_ENV parameter :
 
 ```sh  
-	sudo ./install_setup.sh PLASMA
+	./install_setup.sh PLASMA
 ```
 
 
