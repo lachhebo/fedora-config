@@ -1,0 +1,166 @@
+---
+# tasks file for flathub_packages
+
+
+- name: Add the flathub flatpak repository remote to the user installation
+  community.general.flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    method: system
+
+
+- name: Install the gedit package from flathub
+  community.general.flatpak:
+    name: org.gnome.gedit
+    state: present
+
+
+- name: Install the bitwarden package from flathub
+  community.general.flatpak:
+    name: com.bitwarden.desktop
+    state: present
+
+
+- name: Install the Discord package from flathub
+  community.general.flatpak:
+    name: com.discordapp.Discord
+    state: present
+
+
+- name: Install the marker package from flathub
+  community.general.flatpak:
+    name: com.github.fabiocolacio.marker
+    state: present
+
+
+- name: Install the Gabtag package from flathub
+  community.general.flatpak:
+    name: com.github.lachhebo.Gabtag
+    state: present
+
+
+- name: Install the drawing package from flathub
+  community.general.flatpak:
+    name: com.github.maoschanz.drawing
+    state: present
+
+
+- name: Install the skype package from flathub
+  community.general.flatpak:
+    name: com.skype.Client
+    state: present
+
+
+- name: Install the Steam package from flathub
+  community.general.flatpak:
+    name: com.valvesoftware.Steam
+    state: present
+
+
+- name: Install the Fragments package from flathub
+  community.general.flatpak:
+    name: de.haeckerfelix.Fragments
+    state: present
+
+
+- name: Install the riot package from flathub
+  community.general.flatpak:
+    name: im.riot.Riot
+    state: present
+
+
+- name: Install the antimicrox package from flathub
+  community.general.flatpak:
+    name: io.github.antimicrox.antimicrox
+    state: present
+
+
+- name: Install the Audacity package from flathub
+  community.general.flatpak:
+    name: org.audacityteam.Audacity
+    state: present
+
+
+- name: Install the Setzer package from flathub
+  community.general.flatpak:
+    name: org.cvfosammmm.Setzer
+    state: present
+
+
+- name: Install the Games package from flathub
+  community.general.flatpak:
+    name: org.gnome.Games
+    state: present
+
+
+- name: Install the Lollypop package from flathub
+  community.general.flatpak:
+    name: org.gnome.Lollypop
+    state: present
+
+
+- name: Install the gitg package from flathub
+  community.general.flatpak:
+    name: org.gnome.gitg
+    state: present
+
+
+- name: Install the RetroArch package from flathub
+  community.general.flatpak:
+    name: org.libretro.RetroArch
+    state: present
+
+
+- name: Install the Picard package from flathub
+  community.general.flatpak:
+    name: org.musicbrainz.Picard
+    state: present
+
+
+- name: Install the signal package from flathub
+  community.general.flatpak:
+    name: org.signal.Signal
+    state: present
+
+
+- name: Install the kdenlive package from flathub
+  community.general.flatpak:
+    name: org.kde.kdenlive
+    state: present
+
+
+- name: Install the Gtk3theme package from flathub
+  community.general.flatpak:
+    name: org.gtk.Gtk3theme.Adwaita-dark
+    state: present
+
+
+- name: Install the PasswordSafe package from flathub
+  community.general.flatpak:
+    name: org.gnome.PasswordSafe
+    state: present
+
+
+- name: Install the Games package from flathub
+  community.general.flatpak:
+    name: org.gnome.Games
+    state: present
+
+
+- name: Install the whatip package from flathub
+  community.general.flatpak:
+    name: org.gabmus.whatip
+    state: present
+
+
+- name: Install the gfeeds package from flathub
+  community.general.flatpak:
+    name: org.gabmus.gfeeds
+    state: present
+
+
+- name: Install the SoundRecorder package from flathub
+  community.general.flatpak:
+    name: org.gnome.SoundRecorder
+    state: present
