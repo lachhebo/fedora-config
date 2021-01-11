@@ -1,0 +1,93 @@
+---
+# tasks file for rpm_packages
+
+
+- name: Upgrade all packages
+  become: yes
+  dnf:
+    name: "*"
+    state: latest
+
+
+- name: Uninstall bloat
+  become: yes
+  dnf:
+    name: 
+    - gnome-weather
+    - libreoffice*
+    - gnome-maps
+    - gnome-terminal-nautilus
+    - gnome-sofware
+    - gedit
+    state: absent
+
+
+- name: Install the latest version of Apache and MariaDB
+  become: yes
+  dnf:
+    name:
+      - R
+      - nano
+      - vim-enhanced
+      - python3-devel
+      - nodejs
+      - npm
+      - tilix-nautilus
+      - lm_sensors
+      - flatpak-builder
+      - youtube-dl
+      - valgrind
+      - syncthing
+      - util-linux-user
+      - zsh
+      - htop
+      - pl
+      - opam
+      - ruby
+      - httpd
+      - mariadb
+      - mariadb-server
+      - php
+      - php-*
+      - phpmyadmin
+      - texlive-latex*
+      - gstreamer1-plugins-*
+      - ffmpeg
+      - firefox
+      - chromium-browser-privacy
+      - dconf-editor
+      - ansible
+      - gtk3-devel
+      - poetry
+      - conda
+      - python3-virtualenv
+      - sway
+      - podman
+      - moby-engine
+      - cmake
+      - gcc-c++
+      - vim
+      - neovim
+      - cairo-devel 
+      - pkg-config 
+      - texlive-scheme-full
+      - megasync nautilus-megasync
+      - java-1.8.0-openjdk-devel
+      - java-1.8.0-openjdk
+      - gnome-builder
+      - code
+      - qt5-qtbase qt5-qtbase-devel
+      - barrier
+      - megasync 
+      - nautilus-megasync
+      - python3-jupyter-core
+      - python3-scikit-learn
+      - python3-pandas
+      - python3-numpy
+    state: latest
+
+
+- name: Autoremove unneeded packages installed as dependencies
+  become: yes 
+  dnf:
+    autoremove: yes
