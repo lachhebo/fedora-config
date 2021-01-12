@@ -5,5 +5,9 @@
   roles:
     - role: robertdebock.rpmfusion
     - role: rpm-packages
-    - role: gantsign.visual-studio-code
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: ismail
     - role: flathub_packages
+    - role: gantsign.visual-studio-code
+    - role: oefenweb.pycharm
