@@ -1,0 +1,14 @@
+---
+# tasks file for install_tfenv
+
+- name: clone tfenv repo 
+  git:
+    repo: https://github.com/tfutils/tfenv.git
+    dest: /home/ismail/.tfenv
+
+
+- name: update path in zshrc file 
+  ansible.builtin.lineinfile:
+    path: /home/ismail/.zshrc
+    line: export PATH="$HOME/.tfenv/bin:$PATH"
+    create: yes
