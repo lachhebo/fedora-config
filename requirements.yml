@@ -1,0 +1,7 @@
+roles:
+  - robertdebock.rpmfusion
+  - gantsign.oh-my-zsh
+  - gantsign.visual-studio-code
+  - oefenweb.pycharm
+collections:
+  - community.general

@@ -1,13 +1,9 @@
-- hosts: all
-  become: yes
-  gather_facts: yes
-
+- name: Apply my fedora config
+  hosts: local
+  become_user: ismail
   roles:
-    - role: robertdebock.rpmfusion
-    - role: rpm-packages
-    - role: gantsign.oh-my-zsh
-      users:
-        - username: ismail
-    - role: flathub_packages
-    - role: gantsign.visual-studio-code
-    - role: oefenweb.pycharm
+    - { role: robertdebock.rpmfusion, become: yes}
+    - { role: rpm_packages, become: yes } 
+    - { role: flathub_packages, become: yes }
+    - { role: gantsign.visual-studio-code, become: yes }
+    - { role: oefenweb.pycharm, become: yes }

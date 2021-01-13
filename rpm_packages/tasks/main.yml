@@ -14,7 +14,7 @@
   dnf:
     name: 
     - gnome-weather
-    - libreoffice*
+    - libreoffice
     - gnome-maps
     - gnome-terminal-nautilus
     - gnome-sofware
@@ -48,9 +48,7 @@
       - mariadb
       - mariadb-server
       - php
-      - php-*
       - phpmyadmin
-      - texlive-latex*
       - gstreamer1-plugins-*
       - ffmpeg
       - firefox
@@ -68,16 +66,17 @@
       - gcc-c++
       - vim
       - neovim
-      - cairo-devel 
-      - pkg-config 
+      - cairo-devel
+      - pkg-config
       - texlive-scheme-full
-      - megasync nautilus-megasync
+      - megasync
+      - nautilus-megasync
       - java-1.8.0-openjdk-devel
       - java-1.8.0-openjdk
       - gnome-builder
-      - qt5-qtbase qt5-qtbase-devel
+      - qt5-qtbase
+      - qt5-qtbase-devel
       - barrier
-      - megasync 
       - nautilus-megasync
       - python3-jupyter-core
       - python3-scikit-learn
