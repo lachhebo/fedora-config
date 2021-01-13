@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include flathub_packages"
+      include_role:
+        name: "flathub_packages"

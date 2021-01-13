@@ -1,0 +1,13 @@
+- hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: robertdebock.rpmfusion
+    - role: rpm-packages
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: ismail
+    - role: flathub_packages
+    - role: gantsign.visual-studio-code
+    - role: oefenweb.pycharm
